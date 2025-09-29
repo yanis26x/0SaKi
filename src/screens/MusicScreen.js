@@ -30,6 +30,17 @@ const TRACKS = [
   // { title: "Demo URL (mp4)", src: "https://your-cdn.com/audio/demo.mp4" },
   // exemple local:
   // { title: "Local MP4", src: require("../../assets/music/demo.mp4") },
+  { title: "swamp4", src: require("../../assets/music/swamp4.wav") },
+  { title: "swamp1", src: require("../../assets/music/swamp1.wav") },
+  { title: "NaNa op", src: require("../../assets/music/nanaost.mp3") },
+  { title: "H3Ll0!!", src: require("../../assets/music/helloOST.mp3") },
+  { title: "hehehehe", src: require("../../assets/music/evil_laugh4.mp3") },
+  { title: "fx1", src: require("../../assets/music/woooo.mp3") },
+  { title: "swamp3", src: require("../../assets/music/swamp3.wav") },
+  { title: "swamp5", src: require("../../assets/music/swamp5.wav") },
+  { title: "swamp6", src: require("../../assets/music/swamp6.wav") },
+  
+  
 ];
 
 export default function MusicScreen() {
