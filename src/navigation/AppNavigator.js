@@ -19,7 +19,7 @@ function Tabs() {
       <Tab.Screen 
         name="Home" 
         component={HomeScreen} 
-        options={{ title: 'Accueil' ,
+        options={{ title: 'Bienvenue sur 0SaKi26x' ,
           tabBarIcon: ({ focused }) => (
       <Image 
         source={require('../../assets/icons/426.png')} 
@@ -36,7 +36,7 @@ function Tabs() {
       <Tab.Screen 
         name="Counter" 
         component={CounterScreen} 
-        options={{ title: 'Compteur',
+        options={{ title: 'Compteur26x',
           tabBarIcon: ({ focused }) => (
       <Image 
         source={require('../../assets/icons/390.png')}
@@ -52,7 +52,7 @@ function Tabs() {
       <Tab.Screen 
         name="Search" 
         component={SearchScreen} 
-        options={{ title: 'Search',
+        options={{ title: 'Search26x',
           tabBarIcon: ({ focused }) => (
       <Image 
         source={require('../../assets/icons/396.png')}
@@ -67,7 +67,7 @@ function Tabs() {
       <Tab.Screen 
         name="Settings" 
         component={SettingsScreen} 
-        options={{ title: 'Paramètres',
+        options={{ title: 'Settings26x',
           tabBarIcon: ({ focused }) => (
       <Image 
         source={require('../../assets/icons/353.png')}
