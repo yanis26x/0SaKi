@@ -36,7 +36,6 @@ const TRACKS = [
   { title: "H3Ll0!!", src: require("../../assets/music/helloOST.mp3") },
   { title: "hehehehe", src: require("../../assets/music/evil_laugh4.mp3") },
   { title: "fx1", src: require("../../assets/music/woooo.mp3") },
-  { title: "swamp3", src: require("../../assets/music/swamp3.wav") },
   { title: "swamp5", src: require("../../assets/music/swamp5.wav") },
   { title: "swamp6", src: require("../../assets/music/swamp6.wav") },
   

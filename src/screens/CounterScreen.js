@@ -37,6 +37,8 @@ const IMAGES = [
   require("../../assets/loneCover.jpg"),
   require("../../assets/addicted_track_cover.jpg"),
   require("../../assets/archive2Cover.jpg"),
+  require("../../assets/parental1.jpg"),
+  require("../../assets/parental2.jpg"),
 ];
 
 export default function CounterScreen() {

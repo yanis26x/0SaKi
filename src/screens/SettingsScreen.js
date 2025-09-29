@@ -36,7 +36,7 @@ export default function SettingsScreen() {
       <View style={styles.card}>
         <Text style={styles.desc}>
           Cette page n’est pas encore prête — reviens plus tard.{"\n"}
-          <Text style={styles.italic}>Not done yet, come back later…</Text>
+          <Text style={styles.italic}>uh, what? Tryna beat that pussy up, tryna get that pussy wet </Text>
         </Text>
       </View>
 
