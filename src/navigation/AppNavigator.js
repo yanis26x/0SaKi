@@ -70,7 +70,7 @@ function Tabs() {
             title: "0SaKi26x",
             tabBarIcon: ({ focused, size }) => (
               <Image
-                source={require("../../assets/icons/426.png")}
+                source={require("../../assets/addicted_track_cover.jpg")}
                 style={{
                   width: size,
                   height: size,
