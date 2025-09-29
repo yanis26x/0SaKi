@@ -18,9 +18,9 @@ export default function HomeScreen({ navigation }) {
           <Text style={styles.btnText}>Gallerie26x</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Search')}>
+        {/* <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Search')}>
           <Text style={styles.btnText}>Search</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </ImageBackground>
   );

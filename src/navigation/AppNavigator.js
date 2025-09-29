@@ -98,7 +98,7 @@ function Tabs() {
             ),
           }}
         />
-        <Tab.Screen
+        {/* <Tab.Screen
           name="Search"
           component={SearchScreen}
           options={{
@@ -115,7 +115,7 @@ function Tabs() {
               />
             ),
           }}
-        />
+        /> */}
         <Tab.Screen
           name="Settings"
           component={SettingsScreen}
