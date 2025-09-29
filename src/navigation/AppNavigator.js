@@ -10,14 +10,15 @@ import DetailsScreen from "../screens/DetailsScreen";
 import CounterScreen from "../screens/CounterScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import SearchScreen from "../screens/SearchScreen";
+import MusicScreen from "../screens/MusicScreen";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 // Palette noire
 const NAV = {
-  bg: "#000000",      // fond global + zones notch/home
-  card: "#000000",    // header + tab bar
+  bg: "#000000", // fond global + zones notch/home
+  card: "#000000", // header + tab bar
   text: "#FFFFFF",
   subtext: "#9CA3AF",
   border: "#000000",
@@ -124,6 +125,25 @@ function Tabs() {
             tabBarIcon: ({ focused, size }) => (
               <Image
                 source={require("../../assets/icons/Settings.png")}
+                style={{
+                  width: size,
+                  height: size,
+                  resizeMode: "contain",
+                  opacity: focused ? 1 : 0.6,
+                }}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Music"
+          component={MusicScreen}
+          options={{
+            title: "Music26x",
+            // si tu as une icône “musique”, remplace le 426.png
+            tabBarIcon: ({ focused, size }) => (
+              <Image
+                source={require("../../assets/242pfp.jpeg")}
                 style={{
                   width: size,
                   height: size,
