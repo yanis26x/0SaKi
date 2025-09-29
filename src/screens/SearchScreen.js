@@ -12,9 +12,10 @@ import {
 export default function SearchScreen({ navigation }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [race, setRace] = useState([
-    'German Shepherds',
-    'Chihuahuas',
-    'Poodles',
+    'lisa',
+    'CestTriste',
+    'BloodMask',
+    '242g',
   ]);
 
   const filtrerRace = race.filter((race) =>
@@ -28,11 +29,11 @@ export default function SearchScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Search Dog Race</Text>
+      <Text style={styles.title}>Search</Text>
 
       <TextInput
         style={styles.searchInput}
-        placeholder="Search Dog race"
+        placeholder="Search here..."
         value={searchQuery}
         onChangeText={(text) => setSearchQuery(text)}
       />
@@ -86,25 +87,25 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '700',
     marginBottom: 16,
-    color: '#880e4f',
+    color: '#0649ffff',
   },
   searchInput: {
     width: '100%',
     height: 40,
-    borderColor: '#bbb',
+    borderColor: '#bbbbbbff',
     borderWidth: 1,
     borderRadius: 8,
     paddingLeft: 8,
     marginBottom: 20,
   },
   button: {
-    backgroundColor: '#f8bbd0',
+    backgroundColor: '#3981c9ff',
     borderRadius: 10,
     paddingVertical: 8,
     paddingHorizontal: 20,
     marginVertical: 5,
     borderWidth: 1,
-    borderColor: '#f48fb1',
+    borderColor: '#ffe7efff',
   },
   buttonAdd: {
     backgroundColor: '#1c5f97ff',
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     textAlign: 'center',
-    color: '#880e4f',
+    color: '#ffffffff',
     fontWeight: '600',
   },
   row: {
