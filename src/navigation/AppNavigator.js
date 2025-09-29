@@ -67,7 +67,7 @@ function Tabs() {
           name="Home"
           component={HomeScreen}
           options={{
-            title: "Bienvenue sur 0SaKi26x",
+            title: "0SaKi26x",
             tabBarIcon: ({ focused, size }) => (
               <Image
                 source={require("../../assets/icons/426.png")}
