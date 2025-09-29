@@ -2,23 +2,20 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Linking, Alert } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-/* --------- Palette (bleu + contraste) --------- */
+/* --------- Thème (aligné avec MusicScreen/Home) --------- */
 const COLORS = {
-  bg: "#0A2540",
-  card: "#112B4A",
-  cardSoft: "#163457",
-  text: "#E6F0FF",
-  subtext: "#94A3B8",
+  bg: "#000000",
+  card: "#0c0c0c",
+  text: "#ffffff",
+  sub: "#9CA3AF",
   primary: "#3B82F6",
-  border: "#1F3B66",
-  white: "#FFFFFF",
+  border: "#1a1a1a",
 };
 
 const socials = [
   { label: "GitHub", value: "@yanis26x", url: "https://github.com/yanis26x" },
   { label: "LinkedIn", value: "@Yanis26x", url: "https://www.linkedin.com/in/yanis-djenadi-058964307/" },
   { label: "Instagram", value: "@yanis26x", url: "https://www.instagram.com/yanis26x/" },
-  
 ];
 
 export default function SettingsScreen() {
@@ -32,25 +29,38 @@ export default function SettingsScreen() {
 
   return (
     <SafeAreaView style={styles.container} edges={["top"]}>
+      {/* Titre top-left */}
+      <Text style={styles.title}>Paramètres</Text>
+
+      {/* Info card */}
       <View style={styles.card}>
-        <Text style={styles.title}>Paramètres</Text>
         <Text style={styles.desc}>
           Cette page n’est pas encore prête — reviens plus tard.{"\n"}
           <Text style={styles.italic}>Not done yet, come back later…</Text>
         </Text>
       </View>
 
-      <View style={styles.cardSoft}>
+      {/* Socials */}
+      <View style={styles.linksCard}>
         <Text style={styles.sectionTitle}>Mes réseaux</Text>
 
         {socials.map((s, i) => (
-          <TouchableOpacity key={i} style={styles.row} onPress={() => openLink(s.url)} activeOpacity={0.8}>
-            <View style={styles.rowTextWrap}>
-              <Text style={styles.rowLabel}>{s.label}</Text>
-              <Text style={styles.rowValue}>{s.value}</Text>
-            </View>
-            <Text style={styles.rowAction}>Ouvrir →</Text>
-          </TouchableOpacity>
+          <View key={i}>
+            <TouchableOpacity
+              activeOpacity={0.85}
+              style={styles.row}
+              onPress={() => openLink(s.url)}
+            >
+              <View style={styles.rowTextWrap}>
+                <Text style={styles.rowLabel}>{s.label}</Text>
+                <Text style={styles.rowValue}>{s.value}</Text>
+              </View>
+              <Text style={styles.rowAction}>Ouvrir →</Text>
+            </TouchableOpacity>
+
+            {/* séparateur fin entre les lignes (sauf dernière) */}
+            {i < socials.length - 1 && <View style={styles.divider} />}
+          </View>
         ))}
       </View>
     </SafeAreaView>
@@ -58,75 +68,59 @@ export default function SettingsScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.bg,
-    padding: 16,
-    gap: 16,
+  container: { flex: 1, backgroundColor: COLORS.bg, paddingHorizontal: 16 },
+  title: {
+    color: COLORS.text,
+    fontSize: 24,
+    fontWeight: "800",
+    marginTop: 6,
+    marginBottom: 12,
   },
+
+  /* Carte info */
   card: {
     backgroundColor: COLORS.card,
-    borderRadius: 16,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-  },
-  cardSoft: {
-    backgroundColor: COLORS.cardSoft,
-    borderRadius: 16,
-    padding: 12,
-    borderWidth: 1,
-    borderColor: COLORS.border,
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: "800",
-    color: COLORS.text,
-    marginBottom: 8,
-  },
-  desc: {
-    fontSize: 16,
-    color: COLORS.text,
-    lineHeight: 22,
-  },
-  italic: {
-    color: COLORS.subtext,
-    fontStyle: "italic",
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: "800",
-    color: COLORS.text,
-    marginBottom: 8,
-    textTransform: "uppercase",
-  },
-  row: {
-    paddingVertical: 12,
-    paddingHorizontal: 8,
     borderRadius: 12,
     borderWidth: 1,
     borderColor: COLORS.border,
-    backgroundColor: "rgba(17,43,74,0.5)",
-    marginBottom: 8,
+    padding: 14,
+    marginBottom: 12,
+  },
+  desc: { color: COLORS.text, fontSize: 14, lineHeight: 20, fontWeight: "600" },
+  italic: { color: COLORS.sub, fontStyle: "italic" },
+
+  /* Carte des liens */
+  linksCard: {
+    backgroundColor: COLORS.card,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    overflow: "hidden",
+  },
+  sectionTitle: {
+    color: COLORS.text,
+    fontSize: 14,
+    fontWeight: "900",
+    paddingHorizontal: 14,
+    paddingTop: 12,
+    paddingBottom: 6,
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
+  row: {
+    paddingVertical: 12,
+    paddingHorizontal: 14,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
-  rowTextWrap: {
-    flexDirection: "column",
-  },
-  rowLabel: {
-    color: COLORS.text,
-    fontWeight: "700",
-    fontSize: 16,
-  },
-  rowValue: {
-    color: COLORS.subtext,
-    fontSize: 14,
-    marginTop: 2,
-  },
-  rowAction: {
-    color: COLORS.primary,
-    fontWeight: "800",
+  rowTextWrap: { flexDirection: "column" },
+  rowLabel: { color: COLORS.text, fontWeight: "800", fontSize: 16 },
+  rowValue: { color: COLORS.sub, fontSize: 13, marginTop: 2, fontWeight: "600" },
+  rowAction: { color: COLORS.primary, fontWeight: "900" },
+  divider: {
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: COLORS.border,
+    marginHorizontal: 14,
   },
 });
