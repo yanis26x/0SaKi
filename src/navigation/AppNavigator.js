@@ -84,10 +84,10 @@ function Tabs() {
           name="Counter"
           component={CounterScreen}
           options={{
-            title: "Compteur26x",
+            title: "Gallerie26x",
             tabBarIcon: ({ focused, size }) => (
               <Image
-                source={require("../../assets/icons/390.png")}
+                source={require("../../assets/icons/Photos.png")}
                 style={{
                   width: size,
                   height: size,
