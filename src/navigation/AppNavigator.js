@@ -22,7 +22,7 @@ function Tabs() {
         options={{ title: 'Accueil' ,
           tabBarIcon: ({ focused }) => (
       <Image 
-        source={require('../../assets/home.png')} 
+        source={require('../../assets/icons/426.png')} 
         style={{
           width: 28, 
           height: 28,
@@ -39,7 +39,7 @@ function Tabs() {
         options={{ title: 'Compteur',
           tabBarIcon: ({ focused }) => (
       <Image 
-        source={require('../../assets/calculator.png')}
+        source={require('../../assets/icons/390.png')}
             
         style={{
           width: 28, 
@@ -55,7 +55,7 @@ function Tabs() {
         options={{ title: 'Search',
           tabBarIcon: ({ focused }) => (
       <Image 
-        source={require('../../assets/loop.png')}
+        source={require('../../assets/icons/396.png')}
         style={{
           width: 28,
           height: 28,
@@ -70,7 +70,7 @@ function Tabs() {
         options={{ title: 'Paramètres',
           tabBarIcon: ({ focused }) => (
       <Image 
-        source={require('../../assets/settings.png')}
+        source={require('../../assets/icons/353.png')}
         style={{
           width: 28,
           height: 28,
