@@ -99,24 +99,6 @@ function Tabs() {
             ),
           }}
         />
-        {/* <Tab.Screen
-          name="Search"
-          component={SearchScreen}
-          options={{
-            title: "Search26x",
-            tabBarIcon: ({ focused, size }) => (
-              <Image
-                source={require("../../assets/icons/396.png")}
-                style={{
-                  width: size,
-                  height: size,
-                  resizeMode: "contain",
-                  opacity: focused ? 1 : 0.6,
-                }}
-              />
-            ),
-          }}
-        /> */}
         <Tab.Screen
           name="Settings"
           component={SettingsScreen}
@@ -182,11 +164,7 @@ export default function AppNavigator() {
             component={Tabs}
             options={{ headerShown: false }}
           />
-          {/* <Stack.Screen
-            name="Details"
-            component={DetailsScreen}
-            options={{ title: "Détails" }}
-          /> */}
+
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

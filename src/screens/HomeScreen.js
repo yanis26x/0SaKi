@@ -36,7 +36,10 @@ export default function HomeScreen({ navigation }) {
       {/* Titre en haut à gauche */}
       <Text style={styles.title}>0Saki26x</Text>
 
-      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        contentContainerStyle={styles.content}
+        showsVerticalScrollIndicator={false}
+      >
         {/* Boutons bleus */}
         <AppButton
           label="Galerie"
@@ -58,17 +61,20 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.aboutCard}>
           <Text style={styles.aboutHeading}>À propos de 0Saki26x</Text>
           <Text style={styles.aboutText}>
-            0Saki26x est une application mobile minimaliste qui réunit une galerie
-            performante, l’ajout rapide d’images (caméra ou pellicule) et un lecteur
-            audio compatible MP4/MP3. Pensée pour la vitesse et la clarté, elle adopte
-            une interface sombre rehaussée d’accents bleus, optimisée pour iOS et Android.
+            0Saki26x est une application mobile minimaliste qui réunit une
+            galerie performante, l’ajout rapide d’images (caméra ou pellicule)
+            et un lecteur audio compatible MP4/MP3. Pensée pour la vitesse et la
+            clarté, elle adopte une interface sombre rehaussée d’accents bleus,
+            optimisée pour iOS et Android.
           </Text>
           <Text style={styles.aboutBullets}>
             {"• Galerie : consultation fluide et plein écran.\n"}
             {"• Ajout : import instantané depuis tes médias.\n"}
             {"• Audio : lecture simple et fiable (.mp4/.m4a/.mp3)."}
           </Text>
-          <Text style={styles.aboutFootnote}>Version interne — fonctionnalités en évolution.</Text>
+          <Text style={styles.aboutFootnote}>
+            Version interne — fonctionnalités en évolution.
+          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -100,7 +106,13 @@ const styles = StyleSheet.create({
     borderColor: COLORS.primary,
   },
   btnText: { color: COLORS.text, fontSize: 16, fontWeight: "900" },
-  btnSub: { color: COLORS.bg, opacity: 0.9, marginTop: 4, fontSize: 12, fontWeight: "700" },
+  btnSub: {
+    color: COLORS.bg,
+    opacity: 0.9,
+    marginTop: 4,
+    fontSize: 12,
+    fontWeight: "700",
+  },
 
   /* Bloc pro */
   aboutCard: {
