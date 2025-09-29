@@ -9,6 +9,8 @@ avoir **Node.js** installé (version utilisée : `v20.19.0`).
 # Installer les dépendances
 npm install
 
+npx expo install expo-av
+
 # Démarrer le projet
 npx expo start
 ```
