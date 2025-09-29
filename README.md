@@ -15,10 +15,8 @@ npx expo start
 
 
 
-![alt text](https://github.com/yanis26x/0SaKi/blob/main/assets/screens/GallerieScreenShot1.png)
+![alt text](https://github.com/yanis26x/0SaKi/blob/main/assets/screens/0SaKi26xScreen.png))
 
-![alt text](https://github.com/yanis26x/0SaKi/blob/main/assets/screens/GallerieScreenShot2.png)
 
-![alt text](https://github.com/yanis26x/0SaKi/blob/main/assets/screens/paramScreenShot.png)
 
 
