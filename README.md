@@ -1,11 +1,18 @@
 # 0SaKi26x
+Application mobile développée avec **Expo Go**.
 
-## pour lancer le projet: 
+## Lancer le projet
+
+avoir **Node.js** installé (version utilisée : `v20.19.0`).
+
+```bash
+# Installer les dépendances
+npm install
+
+# Démarrer le projet
 npx expo start
-
-## node -v :
-v20.19.0
-
-
+```
 
 ![alt text](https://github.com/yanis26x/0SaKi/blob/main/assets/screens/paramScreenShot.png)
+
+
