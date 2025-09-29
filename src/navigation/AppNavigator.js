@@ -123,7 +123,7 @@ function Tabs() {
             title: "Settings26x",
             tabBarIcon: ({ focused, size }) => (
               <Image
-                source={require("../../assets/icons/353.png")}
+                source={require("../../assets/icons/Settings.png")}
                 style={{
                   width: size,
                   height: size,
