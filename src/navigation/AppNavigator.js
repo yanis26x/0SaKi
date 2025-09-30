@@ -6,10 +6,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 import HomeScreen from "../screens/HomeScreen";
-
 import CounterScreen from "../screens/CounterScreen";
 import SettingsScreen from "../screens/SettingsScreen";
-
 import MusicScreen from "../screens/MusicScreen";
 
 const Stack = createNativeStackNavigator();
@@ -164,7 +162,6 @@ export default function AppNavigator() {
             component={Tabs}
             options={{ headerShown: false }}
           />
-
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
