@@ -11,6 +11,14 @@ npm install
 
 npx expo install expo-av
 
+npm i react-native-qrcode-svg
+
+npx expo install expo-clipboard
+
+npx expo install react-native-qrcode-svg react-native-svg expo-file-system expo-media-library
+
+
+
 # Démarrer le projet
 npx expo start
 ```

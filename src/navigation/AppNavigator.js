@@ -9,6 +9,7 @@ import HomeScreen from "../screens/HomeScreen";
 import CounterScreen from "../screens/CounterScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import MusicScreen from "../screens/MusicScreen";
+import QrCodeScreen from "../screens/QrCodeScreen";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -124,6 +125,24 @@ function Tabs() {
             tabBarIcon: ({ focused, size }) => (
               <Image
                 source={require("../../assets/242pfp.jpeg")}
+                style={{
+                  width: size,
+                  height: size,
+                  resizeMode: "contain",
+                  opacity: focused ? 1 : 0.6,
+                }}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Qrcode"
+          component={QrCodeScreen}
+          options={{
+            title: "QrCode26x",
+            tabBarIcon: ({ focused, size }) => (
+              <Image
+                source={require("../../assets/archive2Cover.jpg")}
                 style={{
                   width: size,
                   height: size,
