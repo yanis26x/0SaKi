@@ -46,15 +46,20 @@ export default function HomeScreen({ navigation }) {
           subtitle="Voir toutes les images"
           onPress={() => navigation.navigate("Counter")}
         />
-        <AppButton
+        {/* <AppButton
           label="Ajouter une image"
           subtitle="Depuis la caméra ou la galerie"
-          onPress={() => navigation.navigate("AddImage")}
-        />
+          onPress={() => navigation.navigate("")}
+        /> */}
         <AppButton
           label="Music"
           subtitle="Lecteur audio .mp4/.mp3"
           onPress={() => goTab("Music")}
+        />
+        <AppButton
+          label="QrCode"
+          subtitle="Générateur de QR code"
+          onPress={() => goTab("QrCode")}
         />
 
         {/* Bloc pro à la place du message simple */}

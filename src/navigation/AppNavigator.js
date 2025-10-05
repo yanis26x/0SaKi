@@ -136,7 +136,7 @@ function Tabs() {
           }}
         />
         <Tab.Screen
-          name="Qrcode"
+          name="QrCode"
           component={QrCodeScreen}
           options={{
             title: "QrCode26x",

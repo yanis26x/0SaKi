@@ -17,6 +17,9 @@ npx expo install expo-clipboard
 
 npx expo install react-native-qrcode-svg react-native-svg expo-file-system expo-media-library
 
+npx expo install expo-image-picker
+
+
 
 
 # Démarrer le projet

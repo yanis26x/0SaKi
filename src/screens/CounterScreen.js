@@ -8,8 +8,10 @@ import {
   Modal,
   Pressable,
   FlatList,
+  Alert,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import * as ImagePicker from "expo-image-picker";
 
 // même palette noire que ton AppNavigator
 const COLORS = {
@@ -27,7 +29,7 @@ const COLS = 2;
 const ITEM_W = Math.floor((W - GAP * (COLS + 1)) / COLS);
 const ITEM_H = Math.floor(ITEM_W * 1.1);
 
-// Ajoute/retire des images ici
+// Ajoute/retire des images statiques ici
 const IMAGES = [
   require("../../assets/lisa.jpg"),
   require("../../assets/CestTriste.jpg"),
@@ -42,7 +44,54 @@ const IMAGES = [
 ];
 
 export default function CounterScreen() {
-  const [preview, setPreview] = useState(null); // source require(...) sélectionnée
+  const [preview, setPreview] = useState(null);       // require(...) OU { uri }
+  const [dynamicImages, setDynamicImages] = useState([]); // [{ uri: string }, ...]
+
+  const addImage = () => {
+    Alert.alert("Ajouter une image", "Source ?", [
+      { text: "Caméra", onPress: takePhoto },
+      { text: "Galerie", onPress: pickFromLibrary },
+      { text: "Annuler", style: "cancel" },
+    ]);
+  };
+
+  const pickFromLibrary = async () => {
+    const perm = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (!perm.granted) {
+      Alert.alert("Permission requise", "Autorise l’accès à la galerie pour choisir une image.");
+      return;
+    }
+
+    const res = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      quality: 1,
+      allowsEditing: false,
+    });
+
+    if (!res.canceled && res.assets?.length) {
+      setDynamicImages((prev) => [{ uri: res.assets[0].uri }, ...prev]);
+    }
+  };
+
+  const takePhoto = async () => {
+    const cam = await ImagePicker.requestCameraPermissionsAsync();
+    if (!cam.granted) {
+      Alert.alert("Permission requise", "Autorise l’accès à la caméra pour prendre une photo.");
+      return;
+    }
+
+    const res = await ImagePicker.launchCameraAsync({
+      quality: 1,
+      allowsEditing: false,
+    });
+
+    if (!res.canceled && res.assets?.length) {
+      setDynamicImages((prev) => [{ uri: res.assets[0].uri }, ...prev]);
+    }
+  };
+
+  // Data combinée: d’abord les images ajoutées, puis les statiques
+  const DATA = [...dynamicImages, ...IMAGES];
 
   const renderItem = ({ item }) => (
     <Pressable
@@ -58,17 +107,27 @@ export default function CounterScreen() {
         },
       ]}
     >
+      {/* Image accepte soit un require(number) soit { uri } */}
       <Image source={item} style={styles.thumb} />
     </Pressable>
   );
+
+  const keyExtractor = (item, i) =>
+    typeof item === "number" ? `static-${i}` : `dyn-${item.uri}`;
 
   return (
     <SafeAreaView style={styles.container} edges={["top"]}>
       <Text style={styles.title}>Galerie</Text>
 
+      {/* Bouton Ajouter une image */}
+      <Pressable style={styles.primaryBtn} onPress={addImage}>
+        <Text style={styles.primaryBtnText}>Ajouter une image</Text>
+        <Text style={styles.primaryBtnSub}>Depuis la caméra ou la galerie</Text>
+      </Pressable>
+
       <FlatList
-        data={IMAGES}
-        keyExtractor={(_, i) => String(i)}
+        data={DATA}
+        keyExtractor={keyExtractor}
         numColumns={COLS}
         renderItem={renderItem}
         contentContainerStyle={{ paddingBottom: 16, paddingRight: GAP }}
@@ -100,6 +159,8 @@ export default function CounterScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.bg, padding: 16 },
   title: { color: COLORS.text, fontSize: 22, fontWeight: "800", marginBottom: 6 },
+
+  // carte de tuile
   card: {
     backgroundColor: COLORS.card,
     borderRadius: 14,
@@ -108,6 +169,30 @@ const styles = StyleSheet.create({
     borderColor: COLORS.border,
   },
   thumb: { width: "100%", height: "100%" },
+
+  // bouton "Ajouter une image"
+  primaryBtn: {
+    backgroundColor: COLORS.accent,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    marginBottom: 10,
+  },
+  primaryBtnText: {
+    color: "#fff",
+    fontWeight: "900",
+    fontSize: 16,
+  },
+  primaryBtnSub: {
+    color: "#E5E7EB",
+    fontWeight: "600",
+    fontSize: 12,
+    marginTop: 2,
+  },
+
+  // modal preview
   modalBackdrop: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.95)",
