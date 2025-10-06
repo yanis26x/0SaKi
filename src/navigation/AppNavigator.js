@@ -11,6 +11,7 @@ import SettingsScreen from "../screens/SettingsScreen";
 import MusicScreen from "../screens/MusicScreen";
 import QrCodeScreen from "../screens/QrCodeScreen";
 
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
