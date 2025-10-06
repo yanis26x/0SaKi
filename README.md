@@ -1,6 +1,9 @@
 # 0SaKi26x
 Application mobile développée avec **Expo Go**.
 
+## Demo
+https://youtu.be/KJiTlvWPyUg?si=GgYciQ1WQFpPNzok
+
 ## Lancer le projet
 
 avoir **Node.js** installé (version utilisée : `v20.19.0`).
