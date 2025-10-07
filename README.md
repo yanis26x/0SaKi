@@ -1,5 +1,6 @@
 # 0SaKi26x
 Application mobile développée avec **Expo Go**.
+#
 **Do—dope sick, I'm having withdrawals, I feel uneasy**
 
 ## Demo
