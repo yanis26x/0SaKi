@@ -1,6 +1,6 @@
 # 0SaKi26x
-Application mobile développée avec **Expo Go**.
-#
+Première application mobile développée avec **Expo Go** + nouveau design full black minimaliste.
+
 # **Do—dope sick, I'm having withdrawals, I feel uneasy**
 
 ### Demo
