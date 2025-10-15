@@ -2,6 +2,7 @@
   "expo": {
     "name": "0saki",
     "slug": "osaki",
+    "owner": "yanis26x",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/CestTriste.jpg",
@@ -24,6 +25,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3e2507b1-a87e-40d6-9758-7217398155f4"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3e2507b1-a87e-40d6-9758-7217398155f4"
     }
   }
 }
