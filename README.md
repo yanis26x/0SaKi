@@ -5,7 +5,7 @@ Première application mobile développée avec **Expo Go** + nouveau design full
 <table align="center">
   <tr>
     <td style="vertical-align: top; width: 60%; padding-right: 20px;">
-      <p>L’application est <strong>techniquement pas encore publiée officiellement sur l’App Store</strong> mais tu peux déjà la tester sur ton téléphone !</p>
+      <p>Je <strong>ne la sortirai probablement jamais sur l’App Store</strong>, mais tu peux déjà la tester sur ton téléphone!</p>
       <h2>SCANE LE QR CODE POUR INSTALLER L’APP SUR TON TÉLÉPHONE !</h2>
       <p>(Installe <strong>Expo Go</strong> sur l’App Store d’abord)</p>
       <p>
