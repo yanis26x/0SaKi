@@ -88,7 +88,7 @@ function Tabs() {
             title: "Gallerie26x",
             tabBarIcon: ({ focused, size }) => (
               <Image
-                source={require("../../assets/icons/Photos.png")}
+                source={require("../../assets/Photos.png")}
                 style={{
                   width: size,
                   height: size,
@@ -103,10 +103,10 @@ function Tabs() {
           name="Settings"
           component={SettingsScreen}
           options={{
-            title: "Settings26x",
+            title: "@yanis26x",
             tabBarIcon: ({ focused, size }) => (
               <Image
-                source={require("../../assets/icons/Settings.png")}
+                source={require("../../assets/CestTriste.jpg")}
                 style={{
                   width: size,
                   height: size,
@@ -143,7 +143,7 @@ function Tabs() {
             title: "QrCode26x",
             tabBarIcon: ({ focused, size }) => (
               <Image
-                source={require("../../assets/archive2Cover.jpg")}
+                source={require("../../assets/lucy_cover.png")}
                 style={{
                   width: size,
                   height: size,

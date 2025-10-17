@@ -38,8 +38,8 @@ const IMAGES = [
   require("../../assets/manhunt.jpg"),
   require("../../assets/loneCover.jpg"),
   require("../../assets/addicted_track_cover.jpg"),
-  require("../../assets/archive2Cover.jpg"),
-  require("../../assets/parental1.jpg"),
+  require("../../assets/lamp_cover.jpg"),
+  require("../../assets/lucy_cover.png"),
   require("../../assets/parental2.jpg"),
 ];
 

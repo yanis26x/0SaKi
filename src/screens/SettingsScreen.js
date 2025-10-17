@@ -12,10 +12,12 @@ const COLORS = {
   border: "#1a1a1a",
 };
 
+/* --------- Réseaux sociaux (réordonné + site ajouté) --------- */
 const socials = [
+  { label: "Instagram", value: "@yanis26x", url: "https://www.instagram.com/yanis26x/" },
+  { label: "Site Web", value: "yanis26x.github.io", url: "https://yanis26x.github.io/yanis26x/" },
   { label: "GitHub", value: "@yanis26x", url: "https://github.com/yanis26x" },
   { label: "LinkedIn", value: "@Yanis26x", url: "https://www.linkedin.com/in/yanis-djenadi-058964307/" },
-  { label: "Instagram", value: "@yanis26x", url: "https://www.instagram.com/yanis26x/" },
 ];
 
 export default function SettingsScreen() {
@@ -36,7 +38,9 @@ export default function SettingsScreen() {
       <View style={styles.card}>
         <Text style={styles.desc}>
           Cette page n’est pas encore prête — reviens plus tard.{"\n"}
-          <Text style={styles.italic}>uh, what? Tryna beat that pussy up, tryna get that pussy wet </Text>
+          {/* <Text style={styles.italic}>uh, what? Tryna beat that pussy up, tryna get that pussy wet </Text> */}
+          {/* friendly version */}
+          <Text style={styles.italic}>Do—dope sick, I'm having withdrawals, I feel uneasy</Text>
         </Text>
       </View>
 
@@ -58,7 +62,6 @@ export default function SettingsScreen() {
               <Text style={styles.rowAction}>Ouvrir →</Text>
             </TouchableOpacity>
 
-            {/* séparateur fin entre les lignes (sauf dernière) */}
             {i < socials.length - 1 && <View style={styles.divider} />}
           </View>
         ))}
@@ -124,3 +127,4 @@ const styles = StyleSheet.create({
     marginHorizontal: 14,
   },
 });
+
