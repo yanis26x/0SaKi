@@ -8,7 +8,7 @@ L’application est **techniquement pas encore publiée officiellement sur l’A
 # SCANE LE QR CODE POUR INSTALLER L’APP SUR TON TÉLÉPHONE !! (Installe Expo Go sur l’App Store dabord)
 ![QRCODE](https://github.com/yanis26x/yanis26x/blob/index/OST_IMG/QrcodeOsaki.png) 
 #
-https://expo.dev/preview/update?message=App+0SaKi26x&updateRuntimeVersion=1.0.0&createdAt=2025-10-15T19%3A12%3A56.597Z&slug=exp&projectId=3e2507b1-a87e-40d6-9758-7217398155f4&group=b917554a-85d1-4202-b836-0cf2f4d4f02d
+https://expo.dev/preview/update?message=0SaKi26x+%2B&updateRuntimeVersion=1.0.0&createdAt=2025-10-17T07%3A44%3A20.340Z&slug=exp&projectId=3e2507b1-a87e-40d6-9758-7217398155f4&group=c6e7fe0a-d60e-4a57-95c6-f0ff7a26c84f
 
 ### Demo
 [Voir la démo sur YouTube](https://youtu.be/KJiTlvWPyUg?si=GgYciQ1WQFpPNzok)
